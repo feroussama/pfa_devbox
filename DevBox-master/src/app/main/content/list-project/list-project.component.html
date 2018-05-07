@@ -1,0 +1,48 @@
+<div id="academy-courses" class="page-layout simple" fusePerfectScrollbar>
+
+  <div class="content p-24">
+
+    <div fxLayout="column" fxLayoutAlign="center">
+
+
+      <div class="courses" fxLayout="row wrap" fxLayoutAlign="center">
+
+        <div class="course" *ngFor="let project of projects" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-sm="33" [ngClass]="project.category">
+
+          <div class="course-content" fxLayout="column">
+
+            <div class="header" fxLayout="row" fxLayoutAlign="center center" [ngClass]="project.category + '-bg'">
+
+
+
+              <div class="length" fxLayout="row" fxLayoutAlign="center center">
+                <mat-icon class="length-icon s-20">access_time</mat-icon>
+                <div class="min">Projet</div>
+              </div>
+
+            </div>
+
+            <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+              <div class="h1">{{project.titre}}</div>
+              <div class="updated"> {{project.description}}</div>
+            </div>
+
+            <div class="footer" fxLayout="row" fxLayoutAlign="center center">
+              <button mat-fab class="mat-accent-bg" id="add-contact-button">
+                START
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

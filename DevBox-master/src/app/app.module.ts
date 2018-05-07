@@ -41,6 +41,9 @@ import {AuthService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/auth
 import {ValidadminService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/validadmin.service';
 import {ValidpropService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/validprop.service';
 import {MService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/m.service';
+import { ListProjectComponent } from './main/content/list-project/list-project.component';
+import { AddProjectComponent } from './main/content/add-project/add-project.component';
+import { MembreEqpeProjetComponent } from './main/content/membre-eqpe-projet/membre-eqpe-projet.component';
 
 
 
@@ -137,6 +140,9 @@ const appRoutes: Routes = [
         LoginPropComponent,
         TestTechComponent,
         FuseProjectDashboardComponent,
+        ListProjectComponent,
+        AddProjectComponent,
+        MembreEqpeProjetComponent,
    
        
    

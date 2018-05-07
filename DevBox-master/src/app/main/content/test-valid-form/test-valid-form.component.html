@@ -1,0 +1,1111 @@
+<mat-horizontal-stepper class="mat-elevation-z4" [linear]="true">
+
+  <!-- 1 ère -->
+
+  <mat-step [stepControl]="horizontalStepperStep1">
+
+
+
+    <form [formGroup]="horizontalStepperStep1">
+
+      <ng-template matStepLabel>1 ère Question</ng-template>
+      <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+
+        <mat-form-field fxFlex="100">
+          <textarea matInput placeholder="1ère Question " formControlName="q1"></textarea>
+          <mat-error *ngIf="horizontalStepperStep1Errors.q1.required">
+            is required!
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+
+        <mat-form-field fxFlex="50">
+          <input matInput placeholder="1ère choix" formControlName="q1c1" required>
+          <mat-error *ngIf="horizontalStepperStep1Errors.q1c1.required">
+            is required!
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50">
+          <input matInput placeholder="2éme choix" formControlName="q1c2" required>
+          <mat-error *ngIf="horizontalStepperStep1Errors.q1c2.required">
+            is required!
+          </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field fxFlex="50">
+          <input matInput placeholder="3éme choix" formControlName="q1c3" required>
+          <mat-error *ngIf="horizontalStepperStep1Errors.q1c3.required">
+            is required!
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+        <button mat-raised-button matStepperNext type="button" color="accent">
+          Suivant
+        </button>
+      </div>
+
+    </form>
+
+  </mat-step>
+
+  <!-- 2 éme -->
+
+  <mat-step [stepControl]="horizontalStepperStep2">
+    <form [formGroup]="horizontalStepperStep2">
+      <ng-template matStepLabel>2 éme Question</ng-template>
+      <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+
+        <mat-form-field fxFlex="100">
+          <textarea matInput placeholder="2éme Question " formControlName="q2"></textarea>
+          <mat-error *ngIf="horizontalStepperStep2Errors.q2.required">
+            is required!
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+
+        <mat-form-field fxFlex="50">
+          <input matInput placeholder="1ère choix" formControlName="q2c1" required>
+          <mat-error *ngIf="horizontalStepperStep2Errors.q2c1.required">
+            is required!
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50">
+          <input matInput placeholder="2éme choix" formControlName="q2c2" required>
+          <mat-error *ngIf="horizontalStepperStep2Errors.q2c2.required">
+            is required!
+          </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field fxFlex="50">
+          <input matInput placeholder="3éme choix" formControlName="q2c3" required>
+          <mat-error *ngIf="horizontalStepperStep2Errors.q2c3.required">
+            is required!
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+        <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+         Précédent
+        </button>
+        <button mat-raised-button matStepperNext type="button" color="accent">
+          Suivant
+        </button>
+      </div>
+
+    </form>
+
+  </mat-step>
+
+    <!-- 3 éme -->
+    
+    <mat-step [stepControl]="horizontalStepperStep3">
+      <form [formGroup]="horizontalStepperStep3">
+        <ng-template matStepLabel>3 éme Question</ng-template>
+        <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+    
+          <mat-form-field fxFlex="100">
+            <textarea matInput placeholder="3éme Question " formControlName="q3"></textarea>
+            <mat-error *ngIf="horizontalStepperStep3Errors.q3.required">
+              is required!
+            </mat-error>
+          </mat-form-field>
+    
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+    
+          <mat-form-field fxFlex="50">
+            <input matInput placeholder="1ère choix" formControlName="q3c1" required>
+            <mat-error *ngIf="horizontalStepperStep3Errors.q3c1.required">
+              is required!
+            </mat-error>
+          </mat-form-field>
+    
+          <mat-form-field fxFlex="50">
+            <input matInput placeholder="2éme choix" formControlName="q3c2" required>
+            <mat-error *ngIf="horizontalStepperStep3Errors.q3c2.required">
+              is required!
+            </mat-error>
+          </mat-form-field>
+    
+    
+          <mat-form-field fxFlex="50">
+            <input matInput placeholder="3éme choix" formControlName="q3c3" required>
+            <mat-error *ngIf="horizontalStepperStep3Errors.q3c1.required">
+              is required!
+            </mat-error>
+          </mat-form-field>
+    
+        </div>
+    
+        <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+          <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+             Précédent
+          </button>
+          <button mat-raised-button matStepperNext type="button" color="accent">
+            Suivant
+          </button>
+        </div>
+    
+      </form>
+    
+    </mat-step>
+
+    <!--4 éme -->
+    
+    <mat-step [stepControl]="horizontalStepperStep4">
+      <form [formGroup]="horizontalStepperStep4">
+        <ng-template matStepLabel>4 éme Question</ng-template>
+        <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+    
+          <mat-form-field fxFlex="100">
+            <textarea matInput placeholder="4éme Question " formControlName="q4"></textarea>
+            <mat-error *ngIf="horizontalStepperStep4Errors.q4.required">
+              is required!
+            </mat-error>
+          </mat-form-field>
+    
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+    
+          <mat-form-field fxFlex="50">
+            <input matInput placeholder="1ère choix" formControlName="q4c1" required>
+            <mat-error *ngIf="horizontalStepperStep4Errors.q4c1.required">
+              is required!
+            </mat-error>
+          </mat-form-field>
+    
+          <mat-form-field fxFlex="50">
+            <input matInput placeholder="2éme choix" formControlName="q4c2" required>
+            <mat-error *ngIf="horizontalStepperStep4Errors.q4c2.required">
+              is required!
+            </mat-error>
+          </mat-form-field>
+    
+    
+          <mat-form-field fxFlex="50">
+            <input matInput placeholder="3éme choix" formControlName="q4c3" required>
+            <mat-error *ngIf="horizontalStepperStep4Errors.q4c3.required">
+              is required!
+            </mat-error>
+          </mat-form-field>
+    
+        </div>
+    
+        <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+          <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+            Précédent
+          </button>
+          <button mat-raised-button matStepperNext type="button" color="accent">
+            Suivant
+          </button>
+        </div>
+    
+      </form>
+    
+    </mat-step>
+
+    <!-- 5 éme -->
+    
+    <mat-step [stepControl]="horizontalStepperStep5">
+      <form [formGroup]="horizontalStepperStep5">
+        <ng-template matStepLabel>5 éme Question</ng-template>
+        <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+    
+          <mat-form-field fxFlex="100">
+            <textarea matInput placeholder="5éme Question " formControlName="q5"></textarea>
+            <mat-error *ngIf="horizontalStepperStep5Errors.q5.required">
+              is required!
+            </mat-error>
+          </mat-form-field>
+    
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+    
+          <mat-form-field fxFlex="50">
+            <input matInput placeholder="1ère choix" formControlName="q5c1" required>
+            <mat-error *ngIf="horizontalStepperStep5Errors.q5c1.required">
+              is required!
+            </mat-error>
+          </mat-form-field>
+    
+          <mat-form-field fxFlex="50">
+            <input matInput placeholder="2éme choix" formControlName="q5c2" required>
+            <mat-error *ngIf="horizontalStepperStep5Errors.q5c2.required">
+              is required!
+            </mat-error>
+          </mat-form-field>
+    
+    
+          <mat-form-field fxFlex="50">
+            <input matInput placeholder="3éme choix" formControlName="q5c3" required>
+            <mat-error *ngIf="horizontalStepperStep5Errors.q5c3.required">
+              is required!
+            </mat-error>
+          </mat-form-field>
+    
+        </div>
+    
+        <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+          <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+            Précédent
+          </button>
+          <button mat-raised-button matStepperNext type="button" color="accent">
+            Suivant
+          </button>
+        </div>
+    
+      </form>
+    
+    </mat-step>
+
+      <!-- 6 éme -->
+      
+      <mat-step [stepControl]="horizontalStepperStep6">
+        <form [formGroup]="horizontalStepperStep6">
+          <ng-template matStepLabel>6 éme Question</ng-template>
+          <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+      
+            <mat-form-field fxFlex="100">
+              <textarea matInput placeholder="6éme Question" formControlName="q6"></textarea>
+              <mat-error *ngIf="horizontalStepperStep6Errors.q6.required">
+                is required!
+              </mat-error>
+            </mat-form-field>
+      
+          </div>
+          <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+      
+            <mat-form-field fxFlex="50">
+              <input matInput placeholder="1ère choix" formControlName="q6c1" required>
+              <mat-error *ngIf="horizontalStepperStep6Errors.q6c1.required">
+                is required!
+              </mat-error>
+            </mat-form-field>
+      
+            <mat-form-field fxFlex="50">
+              <input matInput placeholder="2éme choix" formControlName="q6c2" required>
+              <mat-error *ngIf="horizontalStepperStep6Errors.q6c2.required">
+                is required!
+              </mat-error>
+            </mat-form-field>
+      
+      
+            <mat-form-field fxFlex="50">
+              <input matInput placeholder="3éme choix" formControlName="q6c3" required>
+              <mat-error *ngIf="horizontalStepperStep6Errors.q6c3.required">
+                is required!
+              </mat-error>
+            </mat-form-field>
+      
+          </div>
+      
+          <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+            <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+              Précédent
+            </button>
+            <button mat-raised-button matStepperNext type="button" color="accent">
+              Suivant
+            </button>
+          </div>
+      
+        </form>
+      
+      </mat-step>
+
+        <!-- 7 éme -->
+        
+        <mat-step [stepControl]="horizontalStepperStep7">
+          <form [formGroup]="horizontalStepperStep7">
+            <ng-template matStepLabel>7 éme Question</ng-template>
+            <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+        
+              <mat-form-field fxFlex="100">
+                <textarea matInput placeholder="7éme Question" formControlName="q7"></textarea>
+                <mat-error *ngIf="horizontalStepperStep7Errors.q7.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="1ère choix" formControlName="q7c1" required>
+                <mat-error *ngIf="horizontalStepperStep7Errors.q7c1.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="2éme choix" formControlName="q7c2" required>
+                <mat-error *ngIf="horizontalStepperStep7Errors.q7c2.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="3éme choix" formControlName="q7c3" required>
+                <mat-error *ngIf="horizontalStepperStep7Errors.q7c3.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+            </div>
+        
+            <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+              <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                Précédent
+              </button>
+              <button mat-raised-button matStepperNext type="button" color="accent">
+                Suivant
+              </button>
+            </div>
+        
+          </form>
+        
+        </mat-step>
+
+        <!-- 8 éme -->
+        
+        <mat-step [stepControl]="horizontalStepperStep8">
+          <form [formGroup]="horizontalStepperStep8">
+            <ng-template matStepLabel>8 éme Question</ng-template>
+            <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+        
+              <mat-form-field fxFlex="100">
+                <textarea matInput placeholder="8éme Question" formControlName="q8"></textarea>
+                <mat-error *ngIf="horizontalStepperStep8Errors.q8.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="1ère choix" formControlName="q8c1" required>
+                <mat-error *ngIf="horizontalStepperStep8Errors.q8c1.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="2éme choix" formControlName="q8c2" required>
+                <mat-error *ngIf="horizontalStepperStep8Errors.q8c2.required">
+                  is required
+                </mat-error>
+              </mat-form-field>
+        
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="3éme choix" formControlName="q8c3" required>
+                <mat-error *ngIf="horizontalStepperStep8Errors.q8c3.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+            </div>
+        
+            <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+              <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                Précédent
+              </button>
+              <button mat-raised-button matStepperNext type="button" color="accent">
+                Suivant
+              </button>
+            </div>
+        
+          </form>
+        
+        </mat-step>
+
+        <!-- 9 éme -->
+        
+        <mat-step [stepControl]="horizontalStepperStep9">
+          <form [formGroup]="horizontalStepperStep9">
+            <ng-template matStepLabel>9 éme Question</ng-template>
+            <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+        
+              <mat-form-field fxFlex="100">
+                <textarea matInput placeholder="9éme Question" formControlName="q9"></textarea>
+                <mat-error *ngIf="horizontalStepperStep9Errors.q9.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="1ère choix" formControlName="q9c1" required>
+                <mat-error *ngIf="horizontalStepperStep9Errors.q9c1.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="2éme choix" formControlName="q9c2" required>
+                <mat-error *ngIf="horizontalStepperStep9Errors.q9c2.required">
+                  is required
+                </mat-error>
+              </mat-form-field>
+        
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="3éme choix" formControlName="q9c3" required>
+                <mat-error *ngIf="horizontalStepperStep9Errors.q9c3.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+            </div>
+        
+            <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+              <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                Précédent
+              </button>
+              <button mat-raised-button matStepperNext type="button" color="accent">
+                Suivant
+              </button>
+            </div>
+        
+          </form>
+        
+        </mat-step>
+
+        <!-- 10 éme -->
+        
+        <mat-step [stepControl]="horizontalStepperStep10">
+          <form [formGroup]="horizontalStepperStep10">
+            <ng-template matStepLabel>10 éme Question</ng-template>
+            <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+        
+              <mat-form-field fxFlex="100">
+                <textarea matInput placeholder="10 éme Question" formControlName="q10"></textarea>
+                <mat-error *ngIf="horizontalStepperStep10Errors.q10.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="1ère choix" formControlName="q10c1" required>
+                <mat-error *ngIf="horizontalStepperStep10Errors.q10c1.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="2éme choix" formControlName="q10c2" required>
+                <mat-error *ngIf="horizontalStepperStep10Errors.q10c2.required">
+                  is required
+                </mat-error>
+              </mat-form-field>
+        
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="3éme choix" formControlName="q10c3" required>
+                <mat-error *ngIf="horizontalStepperStep10Errors.q10c3.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+            </div>
+        
+            <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+              <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                Précédent
+              </button>
+              <button mat-raised-button matStepperNext type="button" color="accent">
+                Suivant
+              </button>
+            </div>
+        
+          </form>
+        
+        </mat-step>
+
+        <!-- 11 éme -->
+        
+        <mat-step [stepControl]="horizontalStepperStep11">
+          <form [formGroup]="horizontalStepperStep11">
+            <ng-template matStepLabel>11 éme Question</ng-template>
+            <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+        
+              <mat-form-field fxFlex="100">
+                <textarea matInput placeholder="11 éme Question" formControlName="q11"></textarea>
+                <mat-error *ngIf="horizontalStepperStep11Errors.q11.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="1ère choix" formControlName="q11c1" required>
+                <mat-error *ngIf="horizontalStepperStep11Errors.q11c1.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="2éme choix" formControlName="q11c2" required>
+                <mat-error *ngIf="horizontalStepperStep11Errors.q11c2.required">
+                  is required
+                </mat-error>
+              </mat-form-field>
+        
+        
+              <mat-form-field fxFlex="50">
+                <input matInput placeholder="3éme choix" formControlName="q11c3" required>
+                <mat-error *ngIf="horizontalStepperStep11Errors.q11c3.required">
+                  is required!
+                </mat-error>
+              </mat-form-field>
+        
+            </div>
+        
+            <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+              <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                Précédent
+              </button>
+              <button mat-raised-button matStepperNext type="button" color="accent">
+                Suivant
+              </button>
+            </div>
+        
+          </form>
+        
+        </mat-step>
+
+          <!-- 12 éme -->
+          
+          <mat-step [stepControl]="horizontalStepperStep12">
+            <form [formGroup]="horizontalStepperStep12">
+              <ng-template matStepLabel>12 éme Question</ng-template>
+              <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+          
+                <mat-form-field fxFlex="100">
+                  <textarea matInput placeholder="12 éme Question" formControlName="q12"></textarea>
+                  <mat-error *ngIf="horizontalStepperStep12Errors.q12.required">
+                    is required!
+                  </mat-error>
+                </mat-form-field>
+          
+              </div>
+              <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+          
+                <mat-form-field fxFlex="50">
+                  <input matInput placeholder="1ère choix" formControlName="q12c1" required>
+                  <mat-error *ngIf="horizontalStepperStep12Errors.q12c1.required">
+                    is required!
+                  </mat-error>
+                </mat-form-field>
+          
+                <mat-form-field fxFlex="50">
+                  <input matInput placeholder="2éme choix" formControlName="q12c2" required>
+                  <mat-error *ngIf="horizontalStepperStep12Errors.q12c2.required">
+                    is required
+                  </mat-error>
+                </mat-form-field>
+          
+          
+                <mat-form-field fxFlex="50">
+                  <input matInput placeholder="3éme choix" formControlName="q12c3" required>
+                  <mat-error *ngIf="horizontalStepperStep12Errors.q12c3.required">
+                    is required!
+                  </mat-error>
+                </mat-form-field>
+          
+              </div>
+          
+              <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+                <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                  Précédent
+                </button>
+                <button mat-raised-button matStepperNext type="button" color="accent">
+                  Suivant
+                </button>
+              </div>
+          
+            </form>
+          
+          </mat-step>
+
+            <!-- 13 éme -->
+            
+            <mat-step [stepControl]="horizontalStepperStep13">
+              <form [formGroup]="horizontalStepperStep13">
+                <ng-template matStepLabel>13 éme Question</ng-template>
+                <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+            
+                  <mat-form-field fxFlex="100">
+                    <textarea matInput placeholder="13 éme Question" formControlName="q13"></textarea>
+                    <mat-error *ngIf="horizontalStepperStep13Errors.q13.required">
+                      is required!
+                    </mat-error>
+                  </mat-form-field>
+            
+                </div>
+                <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+            
+                  <mat-form-field fxFlex="50">
+                    <input matInput placeholder="1ère choix" formControlName="q13c1" required>
+                    <mat-error *ngIf="horizontalStepperStep13Errors.q13c1.required">
+                      is required!
+                    </mat-error>
+                  </mat-form-field>
+            
+                  <mat-form-field fxFlex="50">
+                    <input matInput placeholder="2éme choix" formControlName="q13c2" required>
+                    <mat-error *ngIf="horizontalStepperStep13Errors.q13c2.required">
+                      is required
+                    </mat-error>
+                  </mat-form-field>
+            
+            
+                  <mat-form-field fxFlex="50">
+                    <input matInput placeholder="3éme choix" formControlName="q13c3" required>
+                    <mat-error *ngIf="horizontalStepperStep13Errors.q13c3.required">
+                      is required!
+                    </mat-error>
+                  </mat-form-field>
+            
+                </div>
+            
+                <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+                  <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                    Précédent
+                  </button>
+                  <button mat-raised-button matStepperNext type="button" color="accent">
+                    Suivant
+                  </button>
+                </div>
+            
+              </form>
+            
+            </mat-step>
+
+              <!-- 14 éme -->
+              
+              <mat-step [stepControl]="horizontalStepperStep14">
+                <form [formGroup]="horizontalStepperStep14">
+                  <ng-template matStepLabel>14 éme Question</ng-template>
+                  <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+              
+                    <mat-form-field fxFlex="100">
+                      <textarea matInput placeholder="14 éme Question" formControlName="q14"></textarea>
+                      <mat-error *ngIf="horizontalStepperStep14Errors.q14.required">
+                        is required!
+                      </mat-error>
+                    </mat-form-field>
+              
+                  </div>
+                  <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+              
+                    <mat-form-field fxFlex="50">
+                      <input matInput placeholder="1ère choix" formControlName="q14c1" required>
+                      <mat-error *ngIf="horizontalStepperStep14Errors.q14c1.required">
+                        is required!
+                      </mat-error>
+                    </mat-form-field>
+              
+                    <mat-form-field fxFlex="50">
+                      <input matInput placeholder="2éme choix" formControlName="q14c2" required>
+                      <mat-error *ngIf="horizontalStepperStep14Errors.q14c2.required">
+                        is required
+                      </mat-error>
+                    </mat-form-field>
+              
+              
+                    <mat-form-field fxFlex="50">
+                      <input matInput placeholder="3éme choix" formControlName="q14c3" required>
+                      <mat-error *ngIf="horizontalStepperStep14Errors.q14c3.required">
+                        is required!
+                      </mat-error>
+                    </mat-form-field>
+              
+                  </div>
+              
+                  <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+                    <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                      Précédent
+                    </button>
+                    <button mat-raised-button matStepperNext type="button" color="accent">
+                      Suivant
+                    </button>
+                  </div>
+              
+                </form>
+              
+              </mat-step>
+
+                <!-- 15 éme -->
+                
+                <mat-step [stepControl]="horizontalStepperStep15">
+                  <form [formGroup]="horizontalStepperStep15">
+                    <ng-template matStepLabel>15 éme Question</ng-template>
+                    <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                
+                      <mat-form-field fxFlex="100">
+                        <textarea matInput placeholder="15 éme Question" formControlName="q15"></textarea>
+                        <mat-error *ngIf="horizontalStepperStep15Errors.q15.required">
+                          is required!
+                        </mat-error>
+                      </mat-form-field>
+                
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                
+                      <mat-form-field fxFlex="50">
+                        <input matInput placeholder="1ère choix" formControlName="q15c1" required>
+                        <mat-error *ngIf="horizontalStepperStep15Errors.q15c1.required">
+                          is required!
+                        </mat-error>
+                      </mat-form-field>
+                
+                      <mat-form-field fxFlex="50">
+                        <input matInput placeholder="2éme choix" formControlName="q15c2" required>
+                        <mat-error *ngIf="horizontalStepperStep15Errors.q15c2.required">
+                          is required
+                        </mat-error>
+                      </mat-form-field>
+                
+                
+                      <mat-form-field fxFlex="50">
+                        <input matInput placeholder="3éme choix" formControlName="q15c3" required>
+                        <mat-error *ngIf="horizontalStepperStep15Errors.q15c3.required">
+                          is required!
+                        </mat-error>
+                      </mat-form-field>
+                
+                    </div>
+                
+                    <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+                      <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                        Précédent
+                      </button>
+                      <button mat-raised-button matStepperNext type="button" color="accent">
+                        Suivant
+                      </button>
+                    </div>
+                
+                  </form>
+                
+                </mat-step>
+
+                <!-- 16 éme -->
+                
+                <mat-step [stepControl]="horizontalStepperStep16">
+                  <form [formGroup]="horizontalStepperStep16">
+                    <ng-template matStepLabel>16 éme Question</ng-template>
+                    <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                
+                      <mat-form-field fxFlex="100">
+                        <textarea matInput placeholder="16 éme Question" formControlName="q16"></textarea>
+                        <mat-error *ngIf="horizontalStepperStep16Errors.q16.required">
+                          is required!
+                        </mat-error>
+                      </mat-form-field>
+                
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                
+                      <mat-form-field fxFlex="50">
+                        <input matInput placeholder="1ère choix" formControlName="q16c1" required>
+                        <mat-error *ngIf="horizontalStepperStep16Errors.q16c1.required">
+                          is required!
+                        </mat-error>
+                      </mat-form-field>
+                
+                      <mat-form-field fxFlex="50">
+                        <input matInput placeholder="2éme choix" formControlName="q16c2" required>
+                        <mat-error *ngIf="horizontalStepperStep16Errors.q16c2.required">
+                          is required
+                        </mat-error>
+                      </mat-form-field>
+                
+                
+                      <mat-form-field fxFlex="50">
+                        <input matInput placeholder="3éme choix" formControlName="q16c3" required>
+                        <mat-error *ngIf="horizontalStepperStep16Errors.q16c3.required">
+                          is required!
+                        </mat-error>
+                      </mat-form-field>
+                
+                    </div>
+                
+                    <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+                      <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                        Précédent
+                      </button>
+                      <button mat-raised-button matStepperNext type="button" color="accent">
+                        Suivant
+                      </button>
+                    </div>
+                
+                  </form>
+                
+                </mat-step>
+
+                <!-- 17 éme -->
+                
+                <mat-step [stepControl]="horizontalStepperStep17">
+                  <form [formGroup]="horizontalStepperStep17">
+                    <ng-template matStepLabel>17 éme Question</ng-template>
+                    <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                
+                      <mat-form-field fxFlex="100">
+                        <textarea matInput placeholder="17 éme Question" formControlName="q17"></textarea>
+                        <mat-error *ngIf="horizontalStepperStep17Errors.q17.required">
+                          is required!
+                        </mat-error>
+                      </mat-form-field>
+                
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                
+                      <mat-form-field fxFlex="50">
+                        <input matInput placeholder="1ère choix" formControlName="q17c1" required>
+                        <mat-error *ngIf="horizontalStepperStep17Errors.q17c1.required">
+                          is required!
+                        </mat-error>
+                      </mat-form-field>
+                
+                      <mat-form-field fxFlex="50">
+                        <input matInput placeholder="2éme choix" formControlName="q17c2" required>
+                        <mat-error *ngIf="horizontalStepperStep17Errors.q17c2.required">
+                          is required
+                        </mat-error>
+                      </mat-form-field>
+                
+                
+                      <mat-form-field fxFlex="50">
+                        <input matInput placeholder="3éme choix" formControlName="q17c3" required>
+                        <mat-error *ngIf="horizontalStepperStep17Errors.q17c3.required">
+                          is required!
+                        </mat-error>
+                      </mat-form-field>
+                
+                    </div>
+                
+                    <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+                      <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                        Précédent
+                      </button>
+                      <button mat-raised-button matStepperNext type="button" color="accent">
+                        Suivant
+                      </button>
+                    </div>
+                
+                  </form>
+                
+                </mat-step>
+
+                    <!-- 18 éme -->
+                    
+                    <mat-step [stepControl]="horizontalStepperStep18">
+                      <form [formGroup]="horizontalStepperStep18">
+                        <ng-template matStepLabel>18 éme Question</ng-template>
+                        <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                    
+                          <mat-form-field fxFlex="100">
+                            <textarea matInput placeholder="18 éme Question" formControlName="q18"></textarea>
+                            <mat-error *ngIf="horizontalStepperStep18Errors.q18.required">
+                              is required!
+                            </mat-error>
+                          </mat-form-field>
+                    
+                        </div>
+                        <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                    
+                          <mat-form-field fxFlex="50">
+                            <input matInput placeholder="1ère choix" formControlName="q18c1" required>
+                            <mat-error *ngIf="horizontalStepperStep18Errors.q18c1.required">
+                              is required!
+                            </mat-error>
+                          </mat-form-field>
+                    
+                          <mat-form-field fxFlex="50">
+                            <input matInput placeholder="2éme choix" formControlName="q18c2" required>
+                            <mat-error *ngIf="horizontalStepperStep18Errors.q18c2.required">
+                              is required
+                            </mat-error>
+                          </mat-form-field>
+                    
+                    
+                          <mat-form-field fxFlex="50">
+                            <input matInput placeholder="3éme choix" formControlName="q18c3" required>
+                            <mat-error *ngIf="horizontalStepperStep18Errors.q18c3.required">
+                              is required!
+                            </mat-error>
+                          </mat-form-field>
+                    
+                        </div>
+                    
+                        <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+                          <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                            Précédent
+                          </button>
+                          <button mat-raised-button matStepperNext type="button" color="accent">
+                            Suivant
+                          </button>
+                        </div>
+                    
+                      </form>
+                    
+                    </mat-step>
+
+                      <!-- 19 éme -->
+                      
+                      <mat-step [stepControl]="horizontalStepperStep19">
+                        <form [formGroup]="horizontalStepperStep19">
+                          <ng-template matStepLabel>19 éme Question</ng-template>
+                          <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                      
+                            <mat-form-field fxFlex="100">
+                              <textarea matInput placeholder="18 éme Question" formControlName="q19"></textarea>
+                              <mat-error *ngIf="horizontalStepperStep19Errors.q19.required">
+                                is required!
+                              </mat-error>
+                            </mat-form-field>
+                      
+                          </div>
+                          <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                      
+                            <mat-form-field fxFlex="50">
+                              <input matInput placeholder="1ère choix" formControlName="q19c1" required>
+                              <mat-error *ngIf="horizontalStepperStep19Errors.q19c1.required">
+                                is required!
+                              </mat-error>
+                            </mat-form-field>
+                      
+                            <mat-form-field fxFlex="50">
+                              <input matInput placeholder="2éme choix" formControlName="q19c2" required>
+                              <mat-error *ngIf="horizontalStepperStep19Errors.q19c2.required">
+                                is required
+                              </mat-error>
+                            </mat-form-field>
+                      
+                      
+                            <mat-form-field fxFlex="50">
+                              <input matInput placeholder="3éme choix" formControlName="q19c3" required>
+                              <mat-error *ngIf="horizontalStepperStep19Errors.q19c3.required">
+                                is required!
+                              </mat-error>
+                            </mat-form-field>
+                      
+                          </div>
+                      
+                          <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+                            <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                              Précédent
+                            </button>
+                            <button mat-raised-button matStepperNext type="button" color="accent">
+                              Suivant
+                            </button>
+                          </div>
+                      
+                        </form>
+                      
+                      </mat-step>
+
+                      <!-- 19 éme -->
+                      
+                      <mat-step [stepControl]="horizontalStepperStep20">
+                        <form [formGroup]="horizontalStepperStep20">
+                          <ng-template matStepLabel>20 éme Question</ng-template>
+                          <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                      
+                            <mat-form-field fxFlex="100">
+                              <textarea matInput placeholder="20 éme Question" formControlName="q20"></textarea>
+                              <mat-error *ngIf="horizontalStepperStep20Errors.q20.required">
+                                is required!
+                              </mat-error>
+                            </mat-form-field>
+                      
+                          </div>
+                          <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                      
+                            <mat-form-field fxFlex="50">
+                              <input matInput placeholder="1ère choix" formControlName="q20c1" required>
+                              <mat-error *ngIf="horizontalStepperStep20Errors.q20c1.required">
+                                is required!
+                              </mat-error>
+                            </mat-form-field>
+                      
+                            <mat-form-field fxFlex="50">
+                              <input matInput placeholder="2éme choix" formControlName="q20c2" required>
+                              <mat-error *ngIf="horizontalStepperStep20Errors.q20c2.required">
+                                is required
+                              </mat-error>
+                            </mat-form-field>
+                      
+                      
+                            <mat-form-field fxFlex="50">
+                              <input matInput placeholder="3éme choix" formControlName="q20c3" required>
+                              <mat-error *ngIf="horizontalStepperStep20Errors.q20c3.required">
+                                is required!
+                              </mat-error>
+                            </mat-form-field>
+                      
+                          </div>
+                      
+                          <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+                            <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                              Précédent
+                            </button>
+                            <button mat-raised-button matStepperNext type="button" color="accent">
+                              Suivant
+                            </button>
+                          </div>
+                      
+                        </form>
+                      
+                      </mat-step>
+
+
+
+                 
+
+
+
+
+
+
+  <mat-step>
+
+    <ng-template matStepLabel>Done</ng-template>
+
+    <div class="h2 m-16" fxLayout="row" fxLayoutAlign="center center">
+      Thank your for filling out our form.
+    </div>
+
+    <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+      <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+        Previous
+      </button>
+      <button mat-raised-button type="button" color="accent" (click)="finishHorizontalStepper()">
+        Finish
+      </button>
+    </div>
+
+  </mat-step>
+
+</mat-horizontal-stepper>

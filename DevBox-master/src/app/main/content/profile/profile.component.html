@@ -1,0 +1,250 @@
+<div id="profile" class="page-layout simple tabbed" fusePerfectScrollbar>
+
+  <!-- HEADER -->
+  <div class="header p-24" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="space-between end">
+
+    <div class="user-info" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="start center">
+      <img class="profile-image avatar huge" src="assets/images/avatars/ouss.jpg" *fuseIfOnDom [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+      <div class="name" *fuseIfOnDom [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}"><div *ngIf="user">
+        <h2 class="page-header">{{user.name}}</h2>
+        <ul class="list-group">
+          <li class="list-group-item">Username : {{user.username}}</li>
+          <li class="list-group-item">Email : {{user.email}}</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+
+    <div class="actions" fxLayout="row" fxLayoutAlign="end center" *fuseIfOnDom [@animate]="{value:'*',params:{delay:'200ms'}}">
+      <!-- ADD FILE BUTTON -->
+
+      <input hidden type="file" #fileInput/>
+      <button mat-raised-button color="accent" (click)="fileInput.click()" *fuseIfOnDom [@animate]="{value:'*', params:{delay:'300ms',scale:'0.2'}}">
+        Changer Avatar
+      </button>
+
+
+
+    </div>
+    <!-- / ADD FILE BUTTON -->
+
+
+  </div>
+  <!-- / HEADER -->
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <mat-tab-group dynamicHeight="true">
+
+      <mat-tab label="Personal Infos">
+
+      </mat-tab>
+
+      <mat-tab label="Projects">
+
+        <!-- CONTENT -->
+        <div class="content px-16 py-24 px-sm-24 py-sm-32">
+          <br>
+<strong color="accent"> Historique des Projets :</strong>
+<br>
+          <mat-accordion class="faqs-accordion">
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title flex fxLayout="row" fxLayoutAlign="start center">
+                   Projet 1 
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <h2>Dicription :</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Vivamus ullamcorper nisl erat, vel convallis elit fermentum pellentesque.
+              Sed mollis velit facilisis facilisis viverra.</p>
+              <br>
+              <button class="mr-8" mat-raised-button color="accent">Détails</button>
+              <button class="mr-8" mat-raised-button color="primary">Supprimer</button>
+
+            </mat-expansion-panel>
+          </mat-accordion>
+            <mat-accordion class="faqs-accordion">
+            
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title flex fxLayout="row" fxLayoutAlign="start center">
+                     Projet 2
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <h2>Dicription :</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisl erat, vel convallis elit fermentum
+                  pellentesque. Sed mollis velit facilisis facilisis viverra.</p>
+                <br>
+                <button class="mr-8" mat-raised-button color="accent">Détails</button>
+                <button class="mr-8" mat-raised-button color="primary">Supprimer</button>
+            
+              </mat-expansion-panel>
+            </mat-accordion>
+              <mat-accordion class="faqs-accordion">
+              
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title flex fxLayout="row" fxLayoutAlign="start center">
+                      Projet 3
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <h2>Dicription :</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisl erat, vel convallis elit fermentum
+                    pellentesque. Sed mollis velit facilisis facilisis viverra.</p>
+                  <br>
+                  <button class="mr-8" mat-raised-button color="accent">Détails</button>
+                  <button class="mr-8" mat-raised-button color="primary">Supprimer</button>
+              
+                </mat-expansion-panel>
+              </mat-accordion>
+              <br>
+              <strong color="accent"> Projets En Cours :</strong>
+              <br>
+                <mat-accordion class="faqs-accordion">
+                
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title flex fxLayout="row" fxLayoutAlign="start center">
+                        Projet 1
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <h2>Dicription :</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisl erat, vel convallis elit fermentum
+                      pellentesque. Sed mollis velit facilisis facilisis viverra.</p>
+                    <br>
+                    <button class="mr-8" mat-raised-button color="accent">Détails</button>
+                    <button class="mr-8" mat-raised-button color="primary">Supprimer</button>
+                
+                  </mat-expansion-panel>
+                </mat-accordion>
+                  <mat-accordion class="faqs-accordion">
+                  
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title flex fxLayout="row" fxLayoutAlign="start center">
+                           Projet 1
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <h2>Dicription :</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisl erat, vel convallis elit fermentum
+                        pellentesque. Sed mollis velit facilisis facilisis viverra.</p>
+                      <br>
+                      <button class="mr-8" mat-raised-button color="accent">Détails</button>
+                      <button class="mr-8" mat-raised-button color="primary">Supprimer</button>
+                  
+                    </mat-expansion-panel>
+                  </mat-accordion>
+        </div>
+
+        <!-- / CONTENT -->
+
+      </mat-tab>
+
+      <mat-tab label="Technologies">
+        
+  <!-- CARD 9 -->
+  <div class="card">
+  
+    <!-- PREVIEW -->
+    <div class="card-preview">
+  
+      <div class="fuse-card">
+  
+        <img src="assets/images/cards/card3.jpg">
+  
+        <div class="p-16">
+          <div class="h1">Top Winter Locations</div>
+          <div class="h4 secondary-text">More than 200 locations</div>
+        </div>
+  
+        <div class="p-16 pt-0 line-height-1.75">
+          Cards provide context and an entry point to more robust information and views, and their content and quantity can vary greatly.
+        </div>
+  
+        <div class="p-8 pt-0" fxLayout="row" fxLayoutAlign="space-between center">
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <button mat-button color="accent">SHARE</button>
+            <button mat-button color="accent">EXPLORE</button>
+          </div>
+  
+          <button mat-icon-button aria-label="expand card" (click)="card9Expanded = !card9Expanded">
+            <mat-icon *ngIf="card9Expanded">keyboard_arrow_up</mat-icon>
+            <mat-icon *ngIf="!card9Expanded">keyboard_arrow_down</mat-icon>
+          </button>
+        </div>
+  
+        <div class="card-expand-area" *ngIf="card9Expanded" [@expandCollapse]>
+          <div class="card-expanded-content">
+            Card content that exceeds the maximum card height is truncated and does not scroll, but the card can be expanded. Once expanded,
+            the card may exceed the maximum height of the view. In this case, the card will scroll with the card collection.
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+    <!-- / PREVIEW -->
+  
+    <!-- SOURCE -->
+    <div class="card-source" fxHide fxShow.gt-sm>
+  
+  
+                              <div class="fuse-card">
+  
+                                  <img src="assets/images/cards/card3.jpg">
+  
+                                  <div class="p-16">
+                                      <div class="h1">Top Winter Locations</div>
+                                      <div class="h4 secondary-text">More than 200 locations</div>
+                                  </div>
+  
+                                  <div class="p-16 pt-0 line-height-1.75">
+                                      Cards provide context and an entry point to more robust information and views, and
+                                      their
+                                      content and quantity can vary greatly.
+                                  </div>
+  
+                                  <div class="p-8 pt-0" fxLayout="row" fxLayoutAlign="space-between center">
+                                      <div fxLayout="row" fxLayoutAlign="start center">
+                                          <button mat-button color="accent">SHARE</button>
+                                          <button mat-button color="accent">EXPLORE</button>
+                                      </div>
+  
+                                      <button mat-icon-button aria-label="expand card"
+                                              (click)="card9Expanded = !card9Expanded">
+                                          <mat-icon *ngIf="card9Expanded">keyboard_arrow_up</mat-icon>
+                                          <mat-icon *ngIf="!card9Expanded">keyboard_arrow_down</mat-icon>
+                                      </button>
+                                  </div>
+  
+                                  <div class="card-expand-area" *ngIf="card9Expanded" [@expandCollapse]>
+                                      <div class="card-expanded-content">
+                                          Card content that exceeds the maximum card height is truncated and does not
+                                          scroll, but the card can be expanded. Once expanded, the card may exceed the
+                                          maximum height of the view. In this case, the card will scroll with the card
+                                          collection.
+                                      </div>
+                                  </div>
+  
+                              </div>
+  
+                       
+  
+    </div>
+    <!-- / SOURCE -->
+  
+  </div>
+  <!-- / CARD 9 -->
+  <br><br>
+
+      </mat-tab>
+
+    </mat-tab-group>
+
+  </div>
+  <!-- / CONTENT -->
+
+</div>

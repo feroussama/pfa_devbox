@@ -1,0 +1,291 @@
+<div id="ngx-datatable" class="page-layout simple fullwidth" fusePerfectScrollbar>
+
+  <!-- HEADER -->
+  <div class="header mat-accent-bg p-24 h-160" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center start">
+      <div class="black-fg" fxLayout="row" fxLayoutAlign="start center">
+        <mat-icon class="secondary-text s-16">home</mat-icon>
+        <mat-icon class="secondary-text s-16">chevron_right</mat-icon>
+        <span class="secondary-text">ADMIN</span>
+      </div>
+      <div class="h2 mt-16">Espace Administrateur</div>
+    </div>
+
+
+  </div>
+
+
+  <mat-tab-group>
+    <mat-tab label="Gestion des Utilisateurs">
+      <mat-tab-group>
+        <mat-tab label="Pré-Inscription">
+          <div class="content p-24">
+
+
+            <ul>
+              <li *ngFor="let user of users">
+            
+                  <span>{{user.id}}</span>
+                  {{user.firstname}}
+                  {{user.lastname}}
+                 
+                  {{user.email}}
+                  {{user.adresse}}
+                  
+
+
+                  <button mat-raised-button color="accent" (click)="acceptUser(user)" type="submit" class="submit-button" aria-label="refuser" >
+                    Accepter
+                  </button>
+                  <button mat-raised-button color="accent" (click)="deleteUser(user._id)" type="submit" class="submit-button" aria-label="refuser" >
+                    refuser
+                  </button>
+                
+              </li>
+            </ul>
+
+
+
+
+
+            <ngx-datatable class="material" [rows]="rows" [loadingIndicator]="loadingIndicator" [columnMode]="'force'" [headerHeight]="48"
+              [footerHeight]="56" [rowHeight]="'auto'" [scrollbarH]="true" [reorderable]="reorderable" [selectionType]="'checkbox'"
+              [limit]="10">
+
+              <ngx-datatable-column [width]="48" [canAutoResize]="false" [sortable]="false">
+                <ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
+                  <mat-checkbox [checked]="allRowsSelected" (change)="selectFn(!allRowsSelected)"></mat-checkbox>
+                </ng-template>
+
+                <ng-template ngx-datatable-cell-template let-value="value" let-isSelected="isSelected" let-onCheckboxChangeFn="onCheckboxChangeFn">
+                  <mat-checkbox [checked]="isSelected" (change)="onCheckboxChangeFn($event)"></mat-checkbox>
+                </ng-template>
+              </ngx-datatable-column>
+
+              <ngx-datatable-column name="Name" prop="name"></ngx-datatable-column>
+
+              <ngx-datatable-column name="Last Name" prop="lastName"></ngx-datatable-column>
+
+              <ngx-datatable-column name="Type" prop="Type"></ngx-datatable-column>
+                 
+                  
+                  
+            </ngx-datatable>
+            
+
+
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Gestion De Cértification">
+          <div class="content p-24">
+
+
+
+            <ngx-datatable class="material" [rows]="rows" [loadingIndicator]="loadingIndicator" [columnMode]="'force'" [headerHeight]="48"
+              [footerHeight]="56" [rowHeight]="'auto'" [scrollbarH]="true" [reorderable]="reorderable" [selectionType]="'checkbox'"
+              [limit]="10">
+
+              <ngx-datatable-column [width]="48" [canAutoResize]="false" [sortable]="false">
+                <ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
+                  <mat-checkbox [checked]="allRowsSelected" (change)="selectFn(!allRowsSelected)"></mat-checkbox>
+                </ng-template>
+
+                <ng-template ngx-datatable-cell-template let-value="value" let-isSelected="isSelected" let-onCheckboxChangeFn="onCheckboxChangeFn">
+                  <mat-checkbox [checked]="isSelected" (change)="onCheckboxChangeFn($event)"></mat-checkbox>
+                </ng-template>
+              </ngx-datatable-column>
+
+              <ngx-datatable-column name="Name" prop="name"></ngx-datatable-column>
+
+              <ngx-datatable-column name="Last Name" prop="lastName"></ngx-datatable-column>
+
+              <ngx-datatable-column name="Company" prop="company"></ngx-datatable-column>
+            </ngx-datatable>
+
+          </div>
+
+        </mat-tab>
+
+        <mat-tab label="Catégories Des Utilisateur">
+          <div class="content p-24">
+
+
+
+            <ul>
+              <li *ngFor="let user of users">
+            
+                  <span>{{user.id}}</span>
+                  {{user.firstname}}
+                  {{user.lastname}}
+                 
+                  {{user.email}}
+                  {{user.adresse}}
+                  
+                  <label for="categorieDev">Catégories</label>
+                  <select id="categorieDev" class="form-control" 
+                    [(ngModel)]="categorieDev">
+                    <option *ngFor="let categorieDev of categorieDevs" [value]="categorieDev">{{ categorieDev }}</option>
+                  </select>
+
+                  <button mat-raised-button color="accent" (click)="ajouterCategorie(user,categorieDev)" type="submit" class="submit-button" aria-label="refuser" >
+                    Ajouter
+                  </button>
+                
+                
+              </li>
+            </ul>
+
+
+
+
+            <ngx-datatable class="material" [rows]="rows" [loadingIndicator]="loadingIndicator" [columnMode]="'force'" [headerHeight]="48"
+              [footerHeight]="56" [rowHeight]="'auto'" [scrollbarH]="true" [reorderable]="reorderable" [selectionType]="'checkbox'"
+              [limit]="10">
+
+              <ngx-datatable-column [width]="48" [canAutoResize]="false" [sortable]="false">
+                <ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
+                  <mat-checkbox [checked]="allRowsSelected" (change)="selectFn(!allRowsSelected)"></mat-checkbox>
+                </ng-template>
+
+                <ng-template ngx-datatable-cell-template let-value="value" let-isSelected="isSelected" let-onCheckboxChangeFn="onCheckboxChangeFn">
+                  <mat-checkbox [checked]="isSelected" (change)="onCheckboxChangeFn($event)"></mat-checkbox>
+                </ng-template>
+              </ngx-datatable-column>
+
+              <ngx-datatable-column name="Name" prop="name"></ngx-datatable-column>
+
+              <ngx-datatable-column name="Last Name" prop="lastName"></ngx-datatable-column>
+
+              <ngx-datatable-column name="Company" prop="company"></ngx-datatable-column>
+            </ngx-datatable>
+
+          </div>
+
+        </mat-tab>
+
+      </mat-tab-group>
+
+    </mat-tab>
+    <mat-tab label="Gestion Des Projets">
+      <mat-tab-group>
+        <mat-tab label="Vérification Des Projets">
+
+          <div class="content p-24">
+
+
+
+            <ngx-datatable class="material" [rows]="rows" [loadingIndicator]="loadingIndicator" [columnMode]="'force'" [headerHeight]="48"
+              [footerHeight]="56" [rowHeight]="'auto'" [scrollbarH]="true" [reorderable]="reorderable" [selectionType]="'checkbox'"
+              [limit]="10">
+
+              <ngx-datatable-column [width]="48" [canAutoResize]="false" [sortable]="false">
+                <ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
+                  <mat-checkbox [checked]="allRowsSelected" (change)="selectFn(!allRowsSelected)"></mat-checkbox>
+                </ng-template>
+
+                <ng-template ngx-datatable-cell-template let-value="value" let-isSelected="isSelected" let-onCheckboxChangeFn="onCheckboxChangeFn">
+                  <mat-checkbox [checked]="isSelected" (change)="onCheckboxChangeFn($event)"></mat-checkbox>
+                </ng-template>
+              </ngx-datatable-column>
+
+              <ngx-datatable-column name="Name" prop="name"></ngx-datatable-column>
+
+              <ngx-datatable-column name="Last Name" prop="lastName"></ngx-datatable-column>
+
+              <ngx-datatable-column name="Company" prop="company"></ngx-datatable-column>
+            </ngx-datatable>
+
+          </div>
+
+        </mat-tab>
+
+        <mat-tab label="Catégories des Projets">
+
+          <div class="content p-24">
+
+
+
+            <ngx-datatable class="material" [rows]="rows" [loadingIndicator]="loadingIndicator" [columnMode]="'force'" [headerHeight]="48"
+              [footerHeight]="56" [rowHeight]="'auto'" [scrollbarH]="true" [reorderable]="reorderable" [selectionType]="'checkbox'"
+              [limit]="10">
+
+              <ngx-datatable-column [width]="48" [canAutoResize]="false" [sortable]="false">
+                <ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
+                  <mat-checkbox [checked]="allRowsSelected" (change)="selectFn(!allRowsSelected)"></mat-checkbox>
+                </ng-template>
+
+                <ng-template ngx-datatable-cell-template let-value="value" let-isSelected="isSelected" let-onCheckboxChangeFn="onCheckboxChangeFn">
+                  <mat-checkbox [checked]="isSelected" (change)="onCheckboxChangeFn($event)"></mat-checkbox>
+                </ng-template>
+              </ngx-datatable-column>
+
+              <ngx-datatable-column name="Name" prop="name"></ngx-datatable-column>
+
+              <ngx-datatable-column name="Last Name" prop="lastName"></ngx-datatable-column>
+
+              <ngx-datatable-column name="Company" prop="company"></ngx-datatable-column>
+            </ngx-datatable>
+
+          </div>
+
+        </mat-tab>
+      </mat-tab-group>
+
+
+    </mat-tab>
+
+    <mat-tab label="Gestion Des Formation">
+ 
+
+    </mat-tab>
+    <mat-tab label="Gestion des Notification">
+
+
+      <div class="h2 mb-24">Notification :</div>
+
+      <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+
+        <form class="mat-white-bg mat-elevation-z4 p-24 mr-24 mb-24" fxLayout="column" fxLayoutAlign="start" fxFlex="1 0 auto" name="forgoPasswordForm"
+          [formGroup]="forgotPasswordForm" novalidate (submit)="onRegisterSubmit()">
+
+
+          <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email" [(ngModel)]="email" name="email">
+            <mat-error *ngIf="forgotPasswordFormErrors.email.required">
+              Email is required
+            </mat-error>
+            <mat-error *ngIf="!forgotPasswordFormErrors.email.required && forgotPasswordFormErrors.email.email">
+              Please enter a valid email address
+            </mat-error>
+          </mat-form-field>
+          <br>
+
+
+          <mat-form-field fxFlex="100">
+            <textarea matInput placeholder="MSG" formControlName="msg" [(ngModel)]="tex" name="tex"></textarea>
+            <mat-error *ngIf="forgotPasswordFormErrors.msg.required">
+              msg is required!
+            </mat-error>
+          </mat-form-field>
+
+
+          <button mat-raised-button type="submit" class="submit-button" color="accent" aria-label="SEND RESET LINK" [disabled]="forgotPasswordForm.invalid">
+            ENVOYER
+          </button>
+
+        </form>
+      </div>
+
+
+    </mat-tab>
+    <mat-tab label="Gestion des Tests De Validation des Technologies ">
+      <app-test-valid-form></app-test-valid-form>
+
+
+    </mat-tab>
+
+
+
+
+  </mat-tab-group>

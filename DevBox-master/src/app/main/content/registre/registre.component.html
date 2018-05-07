@@ -1,0 +1,229 @@
+<div id="register" fxLayout="row" fxLayoutAlign="start">
+
+  <div id="register-intro" fxFlex fxHide fxShow.gt-xs>
+
+    <div class="logo" *fuseIfOnDom [@animate]="{value:'*',params:{scale:'0.2'}}">
+      <img src="assets/images/logos/fuse.svg">
+    </div>
+
+    <div class="title" *fuseIfOnDom [@animate]="{value:'*',params:{delay:'50ms',y:'25px'}}">
+           Welcome to <strong>DevBox</strong>
+           <br><h2> customer space</h2>
+    </div>
+
+    <div class="description" *fuseIfOnDom [@animate]="{value:'*',params:{delay:'100ms',y:'25px'}}">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisl erat, vel convallis elit fermentum pellentesque.
+      Sed mollis velit facilisis facilisis viverra.
+    </div>
+
+  </div>
+<form (submit)="onRegisterSubmit()">
+
+<!-- VERTICAL STEPPER EXAMPLE -->
+<mat-vertical-stepper class="mat-elevation-z4" [linear]="true">
+
+  <mat-step [stepControl]="verticalStepperStep1">
+
+    <form [formGroup]="verticalStepperStep1">
+
+      <ng-template matStepLabel>Fill out your name</ng-template>
+
+      <div>
+
+        <mat-form-field fxFlex="50">
+          <input matInput placeholder="First name" formControlName="firstName" required [(ngModel)]="firstname" name="firstname">
+          <mat-error *ngIf="verticalStepperStep1Errors.firstName.required">
+            First Name is required!
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50">
+          <input matInput placeholder="Last name" formControlName="lastName" required [(ngModel)]="lastname" name="lastname">
+          <mat-error *ngIf="formErrors.lastName.required">
+            Last Name is required!
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+        <button mat-raised-button matStepperNext type="button" color="accent">
+          Next
+        </button>
+      </div>
+
+    </form>
+
+  </mat-step>
+
+  <mat-step [stepControl]="verticalStepperStep2">
+
+    <form [formGroup]="verticalStepperStep2">
+
+      <ng-template matStepLabel>Fill out your address</ng-template>
+
+      <div>
+
+        <mat-form-field fxFlex="100">
+          <textarea matInput placeholder="Address" formControlName="address" required [(ngModel)]="adresse" name="adresse">
+                                           adresse
+                                        </textarea>
+          <mat-error *ngIf="verticalStepperStep2Errors.address.required">
+            Address is required!
+          </mat-error>
+        </mat-form-field>
+        <br>
+        <br>
+
+        <mat-form-field fxFlex="33">
+          <input matInput placeholder="City" formControlName="city" required [(ngModel)]="city" name="city">
+          <mat-error *ngIf="verticalStepperStep2Errors.city.required">
+            City is required!
+          </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field fxFlex="34">
+          <input matInput placeholder="State" formControlName="state" required [(ngModel)]="state" name="state">
+          <mat-error *ngIf="verticalStepperStep2Errors.state.required">
+            State is required!
+          </mat-error>
+        </mat-form-field>
+        
+   
+
+      </div>
+
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+        <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+          Previous
+        </button>
+        <button mat-raised-button matStepperNext type="button" color="accent">
+          Next
+        </button>
+      </div>
+
+    </form>
+
+  </mat-step>
+
+  <mat-step [stepControl]="verticalStepperStep3">
+
+    <form [formGroup]="verticalStepperStep3">
+
+      <ng-template matStepLabel>Fill out your Account</ng-template>
+
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Email" formControlName="email" required [(ngModel)]="email" name="email">
+          <mat-error *ngIf="verticalStepperStep3Errors.email.required">
+            Email is required
+          </mat-error>
+          <mat-error *ngIf="!verticalStepperStep3Errors.email.required && verticalStepperStep3Errors.email.email">
+            Please enter a valid email address
+          </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field>
+          <input matInput type="password" placeholder="Password" formControlName="password" [(ngModel)]="password" name="password">
+          <mat-error *ngIf="verticalStepperStep3Errors.password.required">
+            Password is required
+          </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field>
+          <input matInput type="password" placeholder="Password (Confirm)" formControlName="passwordConfirm">
+          <mat-error *ngIf="verticalStepperStep3Errors.passwordConfirm.required">
+            Password confirmation is required
+          </mat-error>
+          <mat-error *ngIf="verticalStepperStep3Errors.passwordConfirm.passwordsNotMatch">
+            Passwords must match
+          </mat-error>
+        </mat-form-field>
+
+       
+
+      </div>
+
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+        <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+          Previous
+        </button>
+        <button mat-raised-button matStepperNext type="button" color="accent">
+          Next
+        </button>
+      </div>
+
+    </form>
+
+  </mat-step>
+
+  <mat-step >
+      <ng-template matStepLabel>Upload your Photo</ng-template>
+  
+      
+  <div class="input-file-container">
+    <input mat-raised-button color="primary"  type="file">
+  </div>
+  <p class="file-return"></p>
+  <script>
+    // ajout de la classe JS à HTML
+    document.querySelector("html").classList.add('js');
+
+    // initialisation des variables
+    var fileInput = document.querySelector(".input-file"),
+      button = document.querySelector(".input-file-trigger"),
+      the_return = document.querySelector(".file-return");
+
+    // action lorsque la "barre d'espace" ou "Entrée" est pressée
+    button.addEventListener("keydown", function (event) {
+      if (event.keyCode == 13 || event.keyCode == 32) {
+        fileInput.focus();
+      }
+    });
+
+    // action lorsque le label est cliqué
+    button.addEventListener("click", function (event) {
+      fileInput.focus();
+      return false;
+    });
+    </script>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+        <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+          Previous
+        </button>
+        <button mat-raised-button matStepperNext type="button" color="accent">
+          Next
+        </button>
+      </div>
+  
+    
+  
+  </mat-step>
+
+  <mat-step>
+
+    <ng-template matStepLabel>Done</ng-template>
+
+    <div class="h2 m-16" fxLayout="row" fxLayoutAlign="center center">
+      Thank your for filling out our form.
+    </div>
+
+    <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+      <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+        Previous
+      </button>
+      <button mat-raised-button type="submit" color="accent" (click)="finishVerticalStepper()"><!-- [routerLink]="'/login'">-->
+        Finish
+      </button>
+ 
+    
+
+      
+    </div>
+
+  </mat-step>
+
+</mat-vertical-stepper>
+</form>
+<!-- / VERTICAL STEPPER EXAMPLE -->
+</div>

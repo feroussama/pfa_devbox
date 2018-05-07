@@ -1,0 +1,39 @@
+{
+  "name": "pfa",
+  "version": "1.0.0",
+  "description": "authentification",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "angular-jwt": "^0.1.9",
+    "async": "^2.6.0",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cookie-parser": "1.3.2",
+    "cors": "*",
+    "csurf": "1.5.0",
+    "ejs": "^2.5.8",
+    "errorhandler": "1.1.1",
+    "express": "*",
+    "express-session": "^1.7.6",
+    "jsonwebtoken": "*",
+    "less-middleware": "^2.2.1",
+    "method-override": "2.1.3",
+    "mongoose": "^5.0.17",
+    "morgan": "1.2.3",
+    "multer": "^1.3.0",
+    "nodemailer": "^4.6.4",
+    "passport": "^0.4.0",
+    "passport-jwt": "*",
+    "passport-local": "^1.0.0",
+    "randomstring": "^1.1.5",
+    "serve-favicon": "2.1.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}

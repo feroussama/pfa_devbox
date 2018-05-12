@@ -1,3 +1,22 @@
+
+<div id="ngx-datatable" class="page-layout simple fullwidth" fusePerfectScrollbar>
+
+  <!-- HEADER -->
+  <div class="header mat-accent-bg p-24 h-160" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="column" fxLayoutAlign.gt-xs="center start">
+      <div class="black-fg" fxLayout="row" fxLayoutAlign="start center">
+        <mat-icon class="secondary-text s-16">home</mat-icon>
+        <mat-icon class="secondary-text s-16">chevron_right</mat-icon>
+        <span class="secondary-text">ADMIN</span>
+      </div>
+      <div class="h2 mt-16">Espace d'evaluation des Développeurs</div>
+    </div>
+
+
+  </div>
+
+  <div class="content p-24">
+
 <mat-horizontal-stepper class="mat-elevation-z4" [linear]="true">
 
   <!-- 1 ère -->
@@ -9,7 +28,7 @@
     <form [formGroup]="horizontalStepperStep1">
 
       <ng-template matStepLabel>1 ère Question</ng-template>
-      <div >
+      <div>
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="1ère Question " formControlName="q1"></textarea>
@@ -44,7 +63,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button mat-raised-button matStepperNext type="button" color="accent">
           Suivant
         </button>
@@ -95,7 +114,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -123,7 +142,7 @@
         </mat-form-field>
 
       </div>
-      <div >
+      <div>
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q3c1" required>
@@ -149,7 +168,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -167,7 +186,7 @@
   <mat-step [stepControl]="horizontalStepperStep4">
     <form [formGroup]="horizontalStepperStep4">
       <ng-template matStepLabel>4 éme Question</ng-template>
-<div>
+      <div >
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="4éme Question " formControlName="q4"></textarea>
@@ -177,7 +196,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div >
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q4c1" required>
@@ -203,7 +222,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -221,7 +240,7 @@
   <mat-step [stepControl]="horizontalStepperStep5">
     <form [formGroup]="horizontalStepperStep5">
       <ng-template matStepLabel>5 éme Question</ng-template>
-<div>
+      <div >
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="5éme Question " formControlName="q5"></textarea>
@@ -231,7 +250,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div >
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q5c1" required>
@@ -257,7 +276,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -275,7 +294,7 @@
   <mat-step [stepControl]="horizontalStepperStep6">
     <form [formGroup]="horizontalStepperStep6">
       <ng-template matStepLabel>6 éme Question</ng-template>
-<div>
+      <div >
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="6éme Question" formControlName="q6"></textarea>
@@ -285,7 +304,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div >
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q6c1" required>
@@ -311,7 +330,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -329,7 +348,7 @@
   <mat-step [stepControl]="horizontalStepperStep7">
     <form [formGroup]="horizontalStepperStep7">
       <ng-template matStepLabel>7 éme Question</ng-template>
-<div>
+      <div >
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="7éme Question" formControlName="q7"></textarea>
@@ -339,7 +358,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div>
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q7c1" required>
@@ -365,7 +384,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -383,7 +402,7 @@
   <mat-step [stepControl]="horizontalStepperStep8">
     <form [formGroup]="horizontalStepperStep8">
       <ng-template matStepLabel>8 éme Question</ng-template>
-<div>
+      <div >
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="8éme Question" formControlName="q8"></textarea>
@@ -393,7 +412,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div>
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q8c1" required>
@@ -419,7 +438,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -437,7 +456,7 @@
   <mat-step [stepControl]="horizontalStepperStep9">
     <form [formGroup]="horizontalStepperStep9">
       <ng-template matStepLabel>9 éme Question</ng-template>
-<div>
+      <div >
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="9éme Question" formControlName="q9"></textarea>
@@ -447,7 +466,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div>
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q9c1" required>
@@ -473,7 +492,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -491,7 +510,7 @@
   <mat-step [stepControl]="horizontalStepperStep10">
     <form [formGroup]="horizontalStepperStep10">
       <ng-template matStepLabel>10 éme Question</ng-template>
-<div>
+      <div>
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="10 éme Question" formControlName="q10"></textarea>
@@ -501,7 +520,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div>
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q10c1" required>
@@ -527,7 +546,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -545,7 +564,7 @@
   <mat-step [stepControl]="horizontalStepperStep11">
     <form [formGroup]="horizontalStepperStep11">
       <ng-template matStepLabel>11 éme Question</ng-template>
-<div>
+      <div>
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="11 éme Question" formControlName="q11"></textarea>
@@ -555,7 +574,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div>
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q11c1" required>
@@ -581,7 +600,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -599,7 +618,7 @@
   <mat-step [stepControl]="horizontalStepperStep12">
     <form [formGroup]="horizontalStepperStep12">
       <ng-template matStepLabel>12 éme Question</ng-template>
-<div>
+      <div>
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="12 éme Question" formControlName="q12"></textarea>
@@ -609,7 +628,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div>
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q12c1" required>
@@ -635,7 +654,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -653,7 +672,7 @@
   <mat-step [stepControl]="horizontalStepperStep13">
     <form [formGroup]="horizontalStepperStep13">
       <ng-template matStepLabel>13 éme Question</ng-template>
-<div>
+      <div>
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="13 éme Question" formControlName="q13"></textarea>
@@ -663,7 +682,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div>
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q13c1" required>
@@ -689,7 +708,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -707,7 +726,7 @@
   <mat-step [stepControl]="horizontalStepperStep14">
     <form [formGroup]="horizontalStepperStep14">
       <ng-template matStepLabel>14 éme Question</ng-template>
-<div>
+      <div>
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="14 éme Question" formControlName="q14"></textarea>
@@ -717,7 +736,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div >
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q14c1" required>
@@ -743,7 +762,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -761,7 +780,7 @@
   <mat-step [stepControl]="horizontalStepperStep15">
     <form [formGroup]="horizontalStepperStep15">
       <ng-template matStepLabel>15 éme Question</ng-template>
-<div>
+      <div>
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="15 éme Question" formControlName="q15"></textarea>
@@ -771,7 +790,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div>
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q15c1" required>
@@ -797,7 +816,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -815,7 +834,7 @@
   <mat-step [stepControl]="horizontalStepperStep16">
     <form [formGroup]="horizontalStepperStep16">
       <ng-template matStepLabel>16 éme Question</ng-template>
-<div>
+      <div >
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="16 éme Question" formControlName="q16"></textarea>
@@ -825,7 +844,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div>
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q16c1" required>
@@ -851,7 +870,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -869,7 +888,7 @@
   <mat-step [stepControl]="horizontalStepperStep17">
     <form [formGroup]="horizontalStepperStep17">
       <ng-template matStepLabel>17 éme Question</ng-template>
-<div>
+      <div >
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="17 éme Question" formControlName="q17"></textarea>
@@ -879,7 +898,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div >
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q17c1" required>
@@ -905,7 +924,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -923,7 +942,7 @@
   <mat-step [stepControl]="horizontalStepperStep18">
     <form [formGroup]="horizontalStepperStep18">
       <ng-template matStepLabel>18 éme Question</ng-template>
-<div>
+      <div >
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="18 éme Question" formControlName="q18"></textarea>
@@ -933,7 +952,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div >
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q18c1" required>
@@ -959,7 +978,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -977,7 +996,7 @@
   <mat-step [stepControl]="horizontalStepperStep19">
     <form [formGroup]="horizontalStepperStep19">
       <ng-template matStepLabel>19 éme Question</ng-template>
-<div>
+      <div >
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="18 éme Question" formControlName="q19"></textarea>
@@ -987,7 +1006,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div>
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q19c1" required>
@@ -1013,7 +1032,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -1031,7 +1050,7 @@
   <mat-step [stepControl]="horizontalStepperStep20">
     <form [formGroup]="horizontalStepperStep20">
       <ng-template matStepLabel>20 éme Question</ng-template>
-<div>
+      <div >
 
         <mat-form-field fxFlex="100">
           <textarea matInput placeholder="20 éme Question" formControlName="q20"></textarea>
@@ -1041,7 +1060,7 @@
         </mat-form-field>
 
       </div>
-<div>
+      <div>
 
         <mat-form-field fxFlex="50">
           <input matInput placeholder="1ère choix" formControlName="q20c1" required>
@@ -1067,7 +1086,7 @@
 
       </div>
 
-<div>
+      <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
         <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
           Précédent
         </button>
@@ -1079,15 +1098,6 @@
     </form>
 
   </mat-step>
-
-
-
-
-
-
-
-
-
 
   <mat-step>
 
@@ -1109,3 +1119,4 @@
   </mat-step>
 
 </mat-horizontal-stepper>
+</div></div>

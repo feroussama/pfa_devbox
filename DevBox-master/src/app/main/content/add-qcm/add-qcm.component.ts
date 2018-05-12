@@ -59,13 +59,7 @@ export class AddQcmComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private fuseConfig: FuseConfigService ) {
  
    // config de template
-    this.fuseConfig.setConfig({
-      layout: {
-        navigation: 'none',
-        toolbar: 'none',
-
-      }
-    });
+   
    
 
     this.formErrors = {

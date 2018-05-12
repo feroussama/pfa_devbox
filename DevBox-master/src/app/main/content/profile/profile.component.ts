@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
-import {SessionService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/session.service';
+import { SessionService } from 'C:/devbox_final/pfa_devbox/DevBox-master/src/app/services/session.service';
 import { Router } from '@angular/router';
 
 import { fuseAnimations } from '@fuse/animations';
@@ -18,16 +18,16 @@ export class ProfileComponent {
 
   user:Object;
 
-  constructor(private sessionService:SessionService, private router:Router) { }
+  constructor(/*private sessionService:SessionService, private router:Router*/) { }
 
    ngOnInit() {
-    this.sessionService.getProfile().subscribe(profile => {
+   /* this.sessionService.getProfile().subscribe(profile => {
       this.user = profile.user;
     },
      err => {
        console.log(err);
        return false;
-     });
+     });*/
    }
 
 }

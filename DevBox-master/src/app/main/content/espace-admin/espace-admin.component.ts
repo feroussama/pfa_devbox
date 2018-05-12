@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {MService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/m.service';
+import {MService} from 'C:/devbox_final/pfa_devbox/DevBox-master/src/app/services/m.service';
 import {Router} from '@angular/router';
 import { FuseConfigService } from '@fuse/services/config.service';
 import { fuseAnimations } from '@fuse/animations';
-import {User} from 'C:/Users/hend/pfa/models/user';
+import { User } from 'C:/devbox_final/pfa_devbox/models/user';
 @Component({
   selector: 'app-espace-admin',
   templateUrl: './espace-admin.component.html',

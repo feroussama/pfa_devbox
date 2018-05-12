@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,NgForm } from '@angular/forms';
-import {ValidpropService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/validprop.service';
+import { ValidpropService } from 'C:/devbox_final/pfa_devbox/DevBox-master/src/app/services/validprop.service';
 
 
 import { Router } from '@angular/router';

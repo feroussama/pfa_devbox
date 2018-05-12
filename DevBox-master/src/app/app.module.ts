@@ -37,13 +37,23 @@ import { TestTechComponent } from './main/content/test-tech/test-tech.component'
 
 import { FuseAcademyModule } from './main/content/academy/academy.module';
 import { FuseProjectDashboardComponent } from './main/content/project/project.component';
-import {AuthService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/auth.service';
-import {ValidadminService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/validadmin.service';
-import {ValidpropService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/validprop.service';
-import {MService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/m.service';
+import { AuthService } from 'C:/devbox_final/pfa_devbox/DevBox-master/src/app/services/auth.service';
+import { ValidadminService } from 'C:/devbox_final/pfa_devbox/DevBox-master/src/app/services/validadmin.service';
+import { ValidpropService } from 'C:/devbox_final/pfa_devbox/DevBox-master/src/app/services/validprop.service';
+import { MService } from 'C:/devbox_final/pfa_devbox/DevBox-master/src/app/services/m.service';
 import { ListProjectComponent } from './main/content/list-project/list-project.component';
 import { AddProjectComponent } from './main/content/add-project/add-project.component';
 import { MembreEqpeProjetComponent } from './main/content/membre-eqpe-projet/membre-eqpe-projet.component';
+import { AddQcmComponent } from './main/content/add-qcm/add-qcm.component';
+import { ChefProfileComponent } from './main/content/chef-profile/chef-profile.component';
+import { ChefNotifComponent } from './main/content/chef-notif/chef-notif.component';
+import { DevNotifComponent } from './main/content/dev-notif/dev-notif.component';
+import { DevResQcmComponent } from './main/content/dev-res-qcm/dev-res-qcm.component';
+import { DevDiscuComponent } from './main/content/dev-discu/dev-discu.component';
+import { ChefDiscuComponent } from './main/content/chef-discu/chef-discu.component';
+import { FormationComponent } from './main/content/formation/formation.component';
+import { KnowledgeBaseModule } from './main/content/knowledge-base/knowledge-base.module';
+import { TestProjetComponent } from './main/content/test-projet/test-projet.component';
 
 
 
@@ -54,7 +64,9 @@ import { MembreEqpeProjetComponent } from './main/content/membre-eqpe-projet/mem
 
 
 const appRoutes: Routes = [
-   
+
+   //espace developpeur
+
     {
         path: 'login',
         component: LoginComponent
@@ -75,6 +87,7 @@ const appRoutes: Routes = [
         path: 'test_tech',
          component: TestTechComponent
     },
+    // espace administrateur
     {
         path: 'adminlogin',
         component: LoginAdminComponent
@@ -84,6 +97,9 @@ const appRoutes: Routes = [
         path: 'adminspace',
         component: EspaceAdminComponent
     },
+
+    //proprietaire du projet
+
        {
         path: 'registreprop',
            component: SigninPropComponent
@@ -102,11 +118,37 @@ const appRoutes: Routes = [
         component: FuseProjectDashboardComponent
     },
     {
-        path: 'projectstep',
-        component: ProjectStepComponent
+        path: 'test-projet',
+        component: TestProjetComponent
 
         
     },
+
+    //chef projet
+    {
+
+        path: 'chef-profile',
+        component: ChefProfileComponent
+
+
+    },
+    {
+
+        path: 'chef-profile',
+        component: ChefProfileComponent
+
+
+    },
+    {
+
+        path: 'ajout_qcm',
+        component: AddQcmComponent
+
+
+    },
+
+    
+
     {
         path: 'start',
         component: StartComponent
@@ -143,6 +185,16 @@ const appRoutes: Routes = [
         ListProjectComponent,
         AddProjectComponent,
         MembreEqpeProjetComponent,
+        AddQcmComponent,
+        ChefProfileComponent,
+        ChefNotifComponent,
+        DevNotifComponent,
+        DevResQcmComponent,
+        DevDiscuComponent,
+        ChefDiscuComponent,
+        FormationComponent,
+        TestProjetComponent,
+       
    
        
    
@@ -165,7 +217,9 @@ const appRoutes: Routes = [
         MaterialModule,
        
         NgxDatatableModule,
-        FuseAcademyModule
+        FuseAcademyModule,
+        KnowledgeBaseModule
+      
     ],
     providers: [AuthService,ValidadminService,ValidpropService,MService ],
     schemas: [

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
-import {AuthService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/auth.service';
+import {AuthService} from 'C:/devbox_final/pfa_devbox/DevBox-master/src/app/services/auth.service';
 
 import { Router } from '@angular/router';
 import { FuseConfigService } from '@fuse/services/config.service';

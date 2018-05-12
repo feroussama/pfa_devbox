@@ -49,6 +49,12 @@ export const navigation = [
                         'title': 'Profile',
                         'type': 'item',
                         'url': '/profile'
+                    },
+                     {
+                        'id': 'certif',
+                        'title': 'Certification Des Téchnologies',
+                        'type': 'item',
+                         'url': '/certif'
                     }
                 ]
             },

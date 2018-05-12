@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import {Router} from '@angular/router';
-import {ValidpropService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/validprop.service';
+import { ValidpropService } from 'C:/devbox_final/pfa_devbox/DevBox-master/src/app/services/validprop.service';
 
 import { FuseConfigService } from '@fuse/services/config.service';
 import { fuseAnimations } from '@fuse/animations';

@@ -1,0 +1,44 @@
+<div id="faq" class="page-layout simple" fusePerfectScrollbar>
+
+  <!-- HEADER -->
+  <div class="header mat-accent-bg p-16 p-sm-24" fxLayout="column" fxLayoutAlign="center center">
+
+    <div class="hero-text mb-32">
+      <h1> Demandes des Projets </h1>
+      <h2>Espace des membres d'equipe</h2>
+    </div>
+
+
+
+  </div>
+  <!-- / HEADER -->
+
+  <!-- CONTENT -->
+  <div class="content px-16 py-24 px-sm-24 py-sm-32">
+
+    <mat-accordion class="faqs-accordion">
+
+      <mat-expansion-panel *ngFor="let notif of notifs">
+        <mat-expansion-panel-header>
+          <mat-panel-title flex fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon class="mr-8">message</mat-icon>
+            {{notif.titre}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        {{notif.description}}
+        <br>
+        <div>
+          <button mat-raised-button type="submit" mat-button class="mat-pink-bg" [routerLink]="'/test-projet'">
+            Accepter
+          </button>
+          <button mat-raised-button type="reset" color="primary">
+            Refuser
+          </button>
+
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <!-- / CONTENT -->
+
+</div>

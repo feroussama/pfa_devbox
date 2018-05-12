@@ -1,0 +1,78 @@
+<div id="profile" class="page-layout simple tabbed" fusePerfectScrollbar>
+
+  <!-- HEADER -->
+  <div class="header p-24" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="space-between end">
+
+    <div class="user-info" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="start center">
+      <img class="profile-image avatar huge" src="assets/images/avatars/ouss.jpg" *fuseIfOnDom [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+      <div class="name" *fuseIfOnDom [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">Ferjani Oussama
+      </div>
+    </div>
+
+    <div class="actions" fxLayout="row" fxLayoutAlign="end center" *fuseIfOnDom [@animate]="{value:'*',params:{delay:'200ms'}}">
+      <!-- ADD FILE BUTTON -->
+
+      <input hidden type="file" #fileInput/>
+      <button mat-raised-button color="accent" (click)="fileInput.click()" *fuseIfOnDom [@animate]="{value:'*', params:{delay:'300ms',scale:'0.2'}}">
+        Changer Avatar
+      </button>
+
+
+
+    </div>
+    <!-- / ADD FILE BUTTON -->
+
+
+  </div>
+  <!-- / HEADER -->
+
+  <!-- CONTENT -->
+  <div class="content">
+
+
+    <mat-tab-group dynamicHeight="true">
+
+        <mat-tab label="Academie">
+          <mat-tab-group>
+            <mat-tab label="Formation Des Téchnologies">
+              <app-formation></app-formation>
+            </mat-tab>
+        
+          </mat-tab-group>
+        
+        </mat-tab>
+
+      <mat-tab label="Projects">
+
+        <mat-tab-group dynamicHeight="true">
+
+          <mat-tab label="Liste des Projets">
+            <app-list-project></app-list-project>
+          </mat-tab>
+
+         
+          <mat-tab label="Demande des projet ">
+            <app-chef-notif></app-chef-notif>
+          </mat-tab>
+
+        </mat-tab-group>
+
+
+      </mat-tab>
+
+
+   
+
+
+      
+      <mat-tab label="Discusion Professionelle">
+   <app-chef-discu></app-chef-discu>
+      </mat-tab>
+
+
+    </mat-tab-group>
+
+  </div>
+  <!-- / CONTENT -->
+
+</div>

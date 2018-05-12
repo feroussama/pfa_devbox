@@ -31,8 +31,7 @@
 
 
     <mat-tab-group dynamicHeight="true">
-      <mat-tab label="Personal Infos">
-      </mat-tab>
+     
 
       <mat-tab label="Projects">
 
@@ -48,107 +47,11 @@
 
           <mat-tab label="Liste des Projets en cour ">
             <mat-tab-group dynamicHeight="true">
-              <mat-tab label="Membre de l'Equipe ">
-                <app-mmbre-eqpe-projet></app-mmbre-eqpe-projet>
-              </mat-tab>
+              
             </mat-tab-group>
           </mat-tab>
 
         </mat-tab-group>
-
-
-      </mat-tab>
-
-
-      <mat-tab label="Technologies">
-
-
-        <div class="card">
-
-          <!-- PREVIEW -->
-          <div class="card-preview">
-
-            <div class="fuse-card">
-
-              <img src="assets/images/cards/card3.jpg">
-
-              <div class="p-16">
-                <div class="h1">Top Winter Locations</div>
-                <div class="h4 secondary-text">More than 200 locations</div>
-              </div>
-
-              <div class="p-16 pt-0 line-height-1.75">
-                Cards provide context and an entry point to more robust information and views, and their content and quantity can vary greatly.
-              </div>
-
-              <div class="p-8 pt-0" fxLayout="row" fxLayoutAlign="space-between center">
-                <div fxLayout="row" fxLayoutAlign="start center">
-                  <button mat-button color="accent">SHARE</button>
-                  <button mat-button color="accent">EXPLORE</button>
-                </div>
-
-                <button mat-icon-button aria-label="expand card" (click)="card9Expanded = !card9Expanded">
-                  <mat-icon *ngIf="card9Expanded">keyboard_arrow_up</mat-icon>
-                  <mat-icon *ngIf="!card9Expanded">keyboard_arrow_down</mat-icon>
-                </button>
-              </div>
-
-              <div class="card-expand-area" *ngIf="card9Expanded" [@expandCollapse]>
-                <div class="card-expanded-content">
-                  Card content that exceeds the maximum card height is truncated and does not scroll, but the card can be expanded. Once expanded,
-                  the card may exceed the maximum height of the view. In this case, the card will scroll with the card collection.
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-          <!-- / PREVIEW -->
-
-          <!-- SOURCE -->
-          <div class="card-source" fxHide fxShow.gt-sm>
-
-
-            <div class="fuse-card">
-
-              <img src="assets/images/cards/card3.jpg">
-
-              <div class="p-16">
-                <div class="h1">Top Winter Locations</div>
-                <div class="h4 secondary-text">More than 200 locations</div>
-              </div>
-
-              <div class="p-16 pt-0 line-height-1.75">
-                Cards provide context and an entry point to more robust information and views, and their content and quantity can vary greatly.
-              </div>
-
-              <div class="p-8 pt-0" fxLayout="row" fxLayoutAlign="space-between center">
-                <div fxLayout="row" fxLayoutAlign="start center">
-                  <button mat-button color="accent">SHARE</button>
-                  <button mat-button color="accent">EXPLORE</button>
-                </div>
-
-                <button mat-icon-button aria-label="expand card" (click)="card9Expanded = !card9Expanded">
-                  <mat-icon *ngIf="card9Expanded">keyboard_arrow_up</mat-icon>
-                  <mat-icon *ngIf="!card9Expanded">keyboard_arrow_down</mat-icon>
-                </button>
-              </div>
-
-              <div class="card-expand-area" *ngIf="card9Expanded" [@expandCollapse]>
-                <div class="card-expanded-content">
-                  Card content that exceeds the maximum card height is truncated and does not scroll, but the card can be expanded. Once expanded,
-                  the card may exceed the maximum height of the view. In this case, the card will scroll with the card collection.
-                </div>
-              </div>
-
-            </div>
-
-
-
-          </div>
-          <!-- / SOURCE -->
-
-        </div>
 
 
       </mat-tab>

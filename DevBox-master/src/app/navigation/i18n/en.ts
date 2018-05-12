@@ -4,6 +4,8 @@ export const locale = {
         'NAV': {
             'COMPTE': 'Compte',
             'PROFILE': 'Profile',
+            
+
 
         }
     }

@@ -5,7 +5,7 @@ import { fuseAnimations } from '@fuse/animations';
 
 
 import {Router} from '@angular/router';
-import {AuthService} from 'C:/Users/hend/pfa/DevBox-master/src/app/services/auth.service';
+import { AuthService } from 'C:/devbox_final/pfa_devbox/DevBox-master/src/app/services/auth.service';
 
 
 

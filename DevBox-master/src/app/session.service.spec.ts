@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { SessionService } from './session.service';
+import { SessionService } from 'C:/devbox_final/pfa_devbox/DevBox-master/src/app/services/session.service';
 
 describe('SessionService', () => {
   beforeEach(() => {

@@ -1,0 +1,10 @@
+[0521/184311.201:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
+[0521/184311.341:ERROR:exception_snapshot_win.cc(88)] thread ID 1268 not found in process
+[0521/184311.357:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0521/184311.279:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::LDR_DATA_TABLE_ENTRY<crashpad::process_types::internal::Traits64>]: Seule une partie d’une requête ReadProcessMemory ou WriteProcessMemory a été effectuée. (0x12B)
+[0521/184311.419:ERROR:process_info.cc(329)] VirtualQueryEx: Accès refusé. (0x5)
+[0521/184311.419:ERROR:process_info.cc(550)] ReadMemoryInfo failed
+[0521/184311.419:ERROR:process_reader_win.cc(242)] ReadMemory at 0x7ffd52de3218 of 12 bytes failed: Seule une partie d’une requête ReadProcessMemory ou WriteProcessMemory a été effectuée. (0x12B)
+[0521/184311.419:WARNING:process_snapshot_win.cc(69)] ReadMemory ExceptionInformation failed
+[0521/184311.419:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0521/184311.419:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentative d’accès à un processus en cours d’arrêt. (0xc000010a)

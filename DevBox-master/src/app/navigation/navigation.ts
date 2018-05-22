@@ -55,6 +55,12 @@ export const navigation = [
                         'title': 'Certification Des Téchnologies',
                         'type': 'item',
                          'url': '/certif'
+                    },
+                    {
+                        'id': 'academy',
+                        'title': 'Formation Des Téchnologies',
+                        'type': 'item',
+                        'url': '/courses'
                     }
                 ]
             },

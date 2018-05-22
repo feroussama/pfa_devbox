@@ -7,8 +7,7 @@ import { FuseSharedModule } from '@fuse/shared.module';
 
 import { FuseAcademyCoursesComponent } from './courses/courses.component';
 import { FuseAcademyCourseComponent } from './course/course.component';
-import { AcademyCoursesService } from './courses.service';
-import { AcademyCourseService } from './course.service';
+
 
 const routes = [
     {
@@ -19,9 +18,7 @@ const routes = [
     {
         path     : 'courses/:courseId/:courseSlug',
         component: FuseAcademyCourseComponent,
-        resolve  : {
-            academy: AcademyCourseService
-        }
+     
     },
   
 ];
@@ -44,8 +41,7 @@ const routes = [
         FuseSharedModule
     ],
     providers   : [
-        AcademyCoursesService,
-        AcademyCourseService
+        
     ]
 })
 export class FuseAcademyModule

@@ -34,7 +34,6 @@ import { PropProfileComponent } from './main/content/prop-profile/prop-profile.c
 import { ProjectStepComponent } from './main/content/project-step/project-step.component';
 import { LoginPropComponent } from './main/content/login-prop/login-prop.component';
 import { TestTechComponent } from './main/content/test-tech/test-tech.component';
-
 import { FuseAcademyModule } from './main/content/academy/academy.module';
 import { FuseProjectDashboardComponent } from './main/content/project/project.component';
 import { AuthService } from 'C:/devbox_final/pfa_devbox/DevBox-master/src/app/services/auth.service';
@@ -54,6 +53,9 @@ import { ChefDiscuComponent } from './main/content/chef-discu/chef-discu.compone
 import { FormationComponent } from './main/content/formation/formation.component';
 import { KnowledgeBaseModule } from './main/content/knowledge-base/knowledge-base.module';
 import { TestProjetComponent } from './main/content/test-projet/test-projet.component';
+import { AffichQcmComponent } from './main/content/affich-qcm/affich-qcm.component';
+import { AjoutCourFormationComponent } from './main/content/ajout-cour-formation/ajout-cour-formation.component';
+import { ChapFormComponent } from './main/content/chap-form/chap-form.component';
 
 
 
@@ -96,6 +98,14 @@ const appRoutes: Routes = [
     {
         path: 'adminspace',
         component: EspaceAdminComponent
+    },
+    {
+        path: 'chap-form',
+        component: ChapFormComponent
+    },
+    {
+        path: 'ajout-cour',
+        component: AjoutCourFormationComponent
     },
 
     //proprietaire du projet
@@ -153,6 +163,10 @@ const appRoutes: Routes = [
         path: 'start',
         component: StartComponent
     },
+    {
+        path: 'affich_qcm',
+        component: AffichQcmComponent
+    },
    
     {
         path      : 'sample',
@@ -194,6 +208,9 @@ const appRoutes: Routes = [
         ChefDiscuComponent,
         FormationComponent,
         TestProjetComponent,
+        AffichQcmComponent,
+        AjoutCourFormationComponent,
+        ChapFormComponent,
        
    
        

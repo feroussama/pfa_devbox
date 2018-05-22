@@ -7,7 +7,7 @@
       <div class="black-fg" fxLayout="row" fxLayoutAlign="start center">
         <mat-icon class="secondary-text s-16">home</mat-icon>
         <mat-icon class="secondary-text s-16">chevron_right</mat-icon>
-        <span class="secondary-text">ADMIN</span>
+        <span class="secondary-text">Chef d'equipe</span>
       </div>
       <div class="h2 mt-16">Espace d'evaluation des Développeurs</div>
     </div>
@@ -1111,7 +1111,7 @@
       <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
         Previous
       </button>
-      <button mat-raised-button type="button" color="accent" (click)="finishHorizontalStepper()">
+      <button mat-raised-button type="button" color="accent" (click)="finishHorizontalStepper()" [routerLink]="'/affich_qcm'" >
         Finish
       </button>
     </div>

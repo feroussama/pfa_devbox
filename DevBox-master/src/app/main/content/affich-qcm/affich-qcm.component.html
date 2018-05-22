@@ -6,9 +6,10 @@
       <div class="black-fg" fxLayout="row" fxLayoutAlign="start center">
         <mat-icon class="secondary-text s-16">home</mat-icon>
         <mat-icon class="secondary-text s-16">chevron_right</mat-icon>
-        <span class="secondary-text">CHEF-PROJET</span>
+        <span class="secondary-text">CHEF-Projet</span>
       </div>
-      <div class="h2 mt-16">Espace de Cértification des Formation</div>
+      <div class="h1 mt-16">Espace d'evaluation des Développeurs</div>
+      <h2>vous pouvez saisir une correction valide </h2>
     </div>
 
 
@@ -25,21 +26,18 @@
             <ng-template matStepLabel>Question </ng-template>
 
             <div>
-
               <code><strong> Qustion : </strong> {{test.q}} </code>
               <br>
               <mat-radio-group class="example-radio-group">
                 <div>
-                  <mat-radio-button value="1"> {{test.qc1}}</mat-radio-button>
+                  <mat-radio-button value="1">{{test.qc1}}</mat-radio-button>
                 </div>
                 <div>
-                  <mat-radio-button value="2"> {{test.qc2}}</mat-radio-button>
+                  <mat-radio-button value="2">{{test.qc2}}</mat-radio-button>
                 </div>
                 <div>
-                  <mat-radio-button value="3"> {{test.qc3}}</mat-radio-button>
+                  <mat-radio-button value="3">{{test.qc3}}</mat-radio-button>
                 </div>
-
-
               </mat-radio-group>
             </div>
 
@@ -68,7 +66,7 @@
           <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
             Previous
           </button>
-          <button mat-raised-button type="button" color="accent" (click)="finishVerticalStepper()" [routerLink]="'/'">
+          <button mat-raised-button type="button" color="accent" (click)="finishVerticalStepper()" [routerLink]="'/chef-profile'">
             Finish
           </button>
         </div>

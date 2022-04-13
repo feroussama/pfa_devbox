@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "angular-jwt": "^0.1.9",
-    "async": "^2.6.0",
+    "async": "^3.2.2",
     "bcrypt-nodejs": "0.0.3",
     "bcryptjs": "*",
     "body-parser": "*",
